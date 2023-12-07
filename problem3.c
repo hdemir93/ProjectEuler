@@ -51,7 +51,7 @@ int main(){
     long long input;
     printf("Enter a value :");
     scanf("%lld", &input);
-    printf("Max prime factor of %lld = %lld.", input, max_prime_factor(input));
+    printf("Max prime factor of %lld : %lld.", input, max_prime_factor(input));
 
 
     return 0;
