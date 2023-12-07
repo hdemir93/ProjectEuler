@@ -5,39 +5,39 @@
 // What is the largest prime factor of the number 600851475143 ?
 
 
-long long max_prime_factor(long long value)
+long long max_prime_factor(long long n)
 {
 
     long long max_prime = -1;
 
 
-    while(value % 2 == 0){
+    while(n % 2 == 0){
         max_prime = 2;
-        value /= 2;
+        n /= 2;
     }
 
-    while(value % 3 == 0){
+    while(n % 3 == 0){
 
         max_prime = 3;
-        value /= 3;
+        n /= 3;
     }
 
-    for(int i = 5; i*i <= value; i += 6){
+    for(int i = 5; i*i <= n; i += 6){
 
-        while(value % i == 0){
+        while(n % i == 0){
             max_prime = i;
-            value /= i;
+            n /= i;
         }
 
-        while(value % (i + 2) == 0){
+        while(n % (i + 2) == 0){
             max_prime = i + 2;
-            value /= (i + 2);
+            n /= (i + 2);
         }
     }
 
 
-    if(value > 4)
-        max_prime = value;
+    if(n > 4)
+        max_prime = n;
 
 
     
@@ -48,10 +48,10 @@ long long max_prime_factor(long long value)
 
 int main(){
 
-    long long input;
+    long long value;
     printf("Enter a value :");
-    scanf("%lld", &input);
-    printf("Max prime factor of %lld : %lld.", input, max_prime_factor(input));
+    scanf("%lld", &value);
+    printf("Max prime factor of %lld : %lld.", value, max_prime_factor(value));
 
 
     return 0;
