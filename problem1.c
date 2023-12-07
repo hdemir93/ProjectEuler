@@ -6,18 +6,18 @@
 
 int main(){
 
-    int number;
+    int value;
     int sum = 0;
-    printf("Enter a number:");
-    scanf("%d", &number);
+    printf("Enter a value:");
+    scanf("%d", &value);
 
 
-    for(int i = 0; i < number; ++i){
+    for(int i = 0; i < value; ++i){
         if(i % 3 == 0 || i % 5 == 0){
             sum += i;
         }
     }
 
-    printf("Sum of multilples 3 or 5 below %d = %d", number, sum);
+    printf("Sum of multilples 3 or 5 below %d = %d", value, sum);
 
 }
